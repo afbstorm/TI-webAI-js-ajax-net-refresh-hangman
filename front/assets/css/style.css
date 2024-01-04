@@ -1,0 +1,276 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: slategrey;
+}
+
+.menuContainer {
+    display: block;
+    width: 100%;
+    max-height: 25rem;
+}
+
+.listContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.listContainer #list {
+    list-style: none;
+}
+
+#list .itemFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#getList {
+    width: 7.5rem;
+    height: auto;
+}
+
+.gameContainer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    align-items: center;
+}
+
+.headerContainer .gameName {
+    color: white;
+    margin-left: 2%;
+    width: 50%;
+}
+
+.modal {
+    display: none;
+    width: 100%;
+    height: auto;
+    font-size: 2em;
+    padding-top: 25vh;
+    border: 2px solid black;
+    z-index: 10;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: slategrey;
+}
+
+.mainContainer .game {
+    width: 70%;
+}
+
+@media screen and (max-width: 700px) {
+    .mainContainer .game {
+        width: 100%;
+    }
+}
+
+.mainContainer .game h2 {
+    height: 5vh;
+    text-align: center;
+    background-color: slategrey;
+}
+
+.mainContainer .game #words {
+    height: 5vh;
+    text-align: center;
+    box-shadow: 5px 5px 5px 0 #000000, inset 4px 4px 15px 0 #000000, 8px 12px 9px 5px rgba(0, 0, 0, 0);
+    background-color: white;
+}
+
+.mainContainer .gallows {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 70%;
+    min-height: 10vh;
+    max-height: 80vh;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 700px) {
+    .mainContainer .gallows {
+        width: 100%;
+    }
+}
+
+.mainContainer .gallows img {
+    max-width: 100%;
+    height: 17.5rem;
+}
+
+@media screen and (max-width: 700px) {
+    .mainContainer .gallows img {
+        padding-top: 18vh;
+    }
+}
+
+.mainContainer .gallows .scores {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 17%;
+}
+
+@media screen and (max-width: 700px) {
+    .mainContainer .gallows .scores {
+        width: 25%;
+    }
+}
+
+.mainContainer .gallows .scores #chancesLeft {
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: 5px;
+    background-color: slategrey;
+}
+
+.mainContainer .gallows .scores #lettersFound {
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: 5px;
+    background-color: slategrey;
+}
+
+.mainContainer .gallows .scores #lettersToFind {
+    flex-shrink: 1;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-left: 5px;
+    background-color: slategrey;
+}
+
+.mainContainer .letters {
+    width: 70%;
+    height: auto;
+    margin-top: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainContainer .letters .letter {
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px 0 #000000, inset 4px 4px 15px 0 #000000, 8px 12px 9px 5px rgba(0, 0, 0, 0);
+}
+
+.mainContainer .letters #a, .mainContainer .letters #b, .mainContainer .letters #c, .mainContainer .letters #d, .mainContainer .letters #e, .mainContainer .letters #f, .mainContainer .letters #g, .mainContainer .letters #h, .mainContainer .letters #i, .mainContainer .letters #j, .mainContainer .letters #k, .mainContainer .letters #l, .mainContainer .letters #m, .mainContainer .letters #n, .mainContainer .letters #o, .mainContainer .letters #p, .mainContainer .letters #q, .mainContainer .letters #r, .mainContainer .letters #s, .mainContainer .letters #t, .mainContainer .letters #u, .mainContainer .letters #v, .mainContainer .letters #w, .mainContainer .letters #x, .mainContainer .letters #y, .mainContainer .letters #z {
+    width: 48px;
+    height: 48px;
+    margin: 0.5em 0.5em 0.2em 0;
+}
+
+@media screen and (max-width: 700px) {
+    .mainContainer .letters {
+        width: 100%;
+    }
+    .mainContainer .letters #a, .mainContainer .letters #b, .mainContainer .letters #c, .mainContainer .letters #d, .mainContainer .letters #e, .mainContainer .letters #f, .mainContainer .letters #g, .mainContainer .letters #h, .mainContainer .letters #i, .mainContainer .letters #j, .mainContainer .letters #k, .mainContainer .letters #l, .mainContainer .letters #m, .mainContainer .letters #n, .mainContainer .letters #o, .mainContainer .letters #p, .mainContainer .letters #q, .mainContainer .letters #r, .mainContainer .letters #s, .mainContainer .letters #t, .mainContainer .letters #u, .mainContainer .letters #v, .mainContainer .letters #w, .mainContainer .letters #x, .mainContainer .letters #y, .mainContainer .letters #z {
+        width: 38px;
+        height: 38px;
+        margin: 0.5em 0.5em 0.2em 0;
+    }
+}
+
+#alert {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#alert #alert-content {
+    background-color: #fefefe;
+    margin: auto;
+    margin-top: 100px;
+    padding: 1rem;
+    border: 10px solid #888;
+    width: 60%;
+}
+
+#alert #alert-content #alertText {
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+#alert #alert-content #alertClose {
+    text-align: center;
+    margin: 2rem;
+}
+
+#alert #alert-content #alertClose #alertCloseButton {
+    background-color: #BBBBBB;
+    padding: 0.8rem;
+    border-radius: 10%;
+    border: solid 1px black;
+    cursor: pointer;
+}
+
+#alert #alert-content #alertRenew {
+    text-align: center;
+    margin: 2rem;
+}
+
+#alert #alert-content #alertRenew #newGame {
+    background-color: #BBBBBB;
+    padding: 0.8rem;
+    border-radius: 10%;
+    border: solid 1px black;
+    cursor: pointer;
+}

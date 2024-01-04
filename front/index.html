@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Jeu du pendu, venez tester vos compétences de déduction et tentez de sauver cette pauvre âme.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Jeu du pendu</title>
+</head>
+
+<body>
+    <header class="headerContainer">
+        <article class="gameName">
+            <h1>Jeu du Pendu</h1>
+        </article>
+    </header>
+    <main class="mainContainer">
+    <section class="menuContainer">
+        <article class="listContainer">
+            <button class="buttons" id="getList">Récupérer la liste des mots</button>
+            <article>
+                <ul id="list"></ul>
+            </article>
+        </article>
+        <article class="inputContainer">
+            <form class="formContainer">
+                <label for="addInput"> Écrit un mot a ajouter dans la DB</label>
+                    <input type="text" id="addInput" />
+                <button type="submit" id="add">Confirmer</button>
+            </form>
+        </article>
+    </section>
+    <button id="startGame" onclick="displayList()">New game</button>
+    <section class="gameContainer">
+            <article class="game">
+                <h2>Sauverez-vous cette pauvre âme ?</h2>
+                <h3 id="words"></h3>
+            </article>
+
+            <section class="gallows">
+                <figure>
+                    <img src="./assets/img/0.png" alt="Pendu" id="imgSrc">
+                </figure>
+                <div class="scores">
+                    <h3 id="chancesLeft">Essais restants : </h3>
+                    <h3 id="lettersFound"></h3>
+                    <h3 id="lettersToFind"></h3>
+                </div>
+            </section>
+            <section class="letters">
+                <button class="letter" id="a" data-letter="a">A</button>
+                <button class="letter" id="z" data-letter="z">Z</button>
+                <button class="letter" id="e" data-letter="e">E</button>
+                <button class="letter" id="r" data-letter="r">R</button>
+                <button class="letter" id="t" data-letter="t">T</button>
+                <button class="letter" id="y" data-letter="y">Y</button>
+                <button class="letter" id="u" data-letter="u">U</button>
+                <button class="letter" id="i" data-letter="i">I</button>
+                <button class="letter" id="o" data-letter="o">O</button>
+                <button class="letter" id="p" data-letter="p">P</button>
+                <button class="letter" id="q" data-letter="q">Q</button>
+                <button class="letter" id="s" data-letter="s">S</button>
+                <button class="letter" id="d" data-letter="d">D</button>
+                <button class="letter" id="f" data-letter="f">F</button>
+                <button class="letter" id="g" data-letter="g">G</button>
+                <button class="letter" id="h" data-letter="h">H</button>
+                <button class="letter" id="j" data-letter="j">J</button>
+                <button class="letter" id="k" data-letter="k">K</button>
+                <button class="letter" id="l" data-letter="l">L</button>
+                <button class="letter" id="m" data-letter="m">M</button>
+                <button class="letter" id="w" data-letter="w">W</button>
+                <button class="letter" id="x" data-letter="x">X</button>
+                <button class="letter" id="c" data-letter="c">C</button>
+                <button class="letter" id="v" data-letter="v">V</button>
+                <button class="letter" id="b" data-letter="b">B</button>
+                <button class="letter" id="n" data-letter="n">N</button>
+            </section>
+        <section id="alert" class="animate__animated animate__backInDown">
+            <div id="alert-content">
+                <p id="alertText"></p>
+                <p id="alertClose"><span id="alertCloseButton">OK</span></p>
+                <p id="alertRenew"><span id="newGame">Nouvelle partie</span></p>
+            </div>
+        </section>
+    </section>
+    </main>
+<script src="./node_modules/axios/dist/axios.min.js"></script>
+<script src="assets/js/services.js" type="module"></script>
+<script src="assets/js/hangman.js" type="module"></script>
+</body>
+
+</html>
